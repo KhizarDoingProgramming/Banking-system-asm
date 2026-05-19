@@ -1,19 +1,19 @@
-# 🏦 Mini Banking Management System (8086 Assembly)
+# Mini Banking Management System (8086 Assembly)
 
 [![Language](https://img.shields.io/badge/Language-Assembly%20(x86)-blue.svg)]()
 [![Platform](https://img.shields.io/badge/Platform-EMU8086-orange.svg)]()
 [![Academic](https://img.shields.io/badge/Course-COAL%20(Semester%204)-purple.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
-An interactive, high-fidelity 16-bit real-mode banking management system engineered entirely in **8086 Assembly Language** for the **EMU8086 emulator**. This project implements classic database principles using low-level memory segment operations, dynamic addressing, hardware-level interrupts, and a robust ASCII terminal user interface.
+An interactive, high-fidelity 16-bit real-mode banking management system engineered entirely in 8086 Assembly Language for the EMU8086 emulator. This project implements classic database principles using low-level memory segment operations, dynamic addressing, hardware-level interrupts, and a robust ASCII terminal user interface.
 
-Developed as a signature semester project for the **Computer Organization and Assembly Language (COAL)** curriculum.
+Developed as a signature semester project for the Computer Organization and Assembly Language (COAL) curriculum.
 
 ---
 
-## 📸 System Visual Experience
+## System Visual Experience
 
-### 🚀 Boot Screen & Loading Bar
+### Boot Screen & Loading Bar
 ```text
       ==========================================
       *      WELCOME TO MINI BANK SYSTEM       *
@@ -25,7 +25,7 @@ Developed as a signature semester project for the **Computer Organization and As
       System Ready! Press any key to continue...
 ```
 
-### 🗂️ Interactive Operations Center
+### Interactive Operations Center
 ```text
   +--------------------------------------------+
   |         MINI BANK MANAGEMENT SYSTEM        |
@@ -43,17 +43,17 @@ Developed as a signature semester project for the **Computer Organization and As
 
 ---
 
-## ✨ Features & Functionality
+## Features & Functionality
 
-*   **🔒 Shielded PIN Verification**: Implements real-time input masking. Key entries are captured silently directly via the keyboard buffer, printing a clean sequence of `*` characters to prevent shoulder-surfing.
-*   **📊 Parallel Segment Database**: Simulates relational fields using synchronized parallel memory arrays for account states, unique codes, PIN credentials, balances, and reference addresses.
-*   **➕ Dynamic Account Provisioning**: Systematically scans memory limits for inactive accounts and sets up a new slot with instant buffer registers.
-*   **⚡ BIOS-Powered GUI Frames**: Renders custom ASCII cards, double-border control lines, and clear layouts using standard 80x25 Color Text Mode 3.
-*   **⏳ Responsive Clock Timing**: Integrates a hardware double-nested loop clock counter to control real-time responsive frames like the loading animation.
+*   **Shielded PIN Verification**: Implements real-time input masking. Key entries are captured silently directly via the keyboard buffer, printing a clean sequence of '*' characters to prevent shoulder-surfing.
+*   **Parallel Segment Database**: Simulates relational fields using synchronized parallel memory arrays for account states, unique codes, PIN credentials, balances, and reference addresses.
+*   **Dynamic Account Provisioning**: Systematically scans memory limits for inactive accounts and sets up a new slot with instant buffer registers.
+*   **BIOS-Powered GUI Frames**: Renders custom ASCII cards, double-border control lines, and clear layouts using standard 80x25 Color Text Mode 3.
+*   **Responsive Clock Timing**: Integrates a hardware double-nested loop clock counter to control real-time responsive frames like the loading animation.
 
 ---
 
-## 🛠️ Low-Level Architecture & Data Flow
+## Low-Level Architecture & Data Flow
 
 ```mermaid
 flowchart TD
@@ -86,14 +86,14 @@ flowchart TD
 
 ---
 
-## 🧠 Core Computer Organization Concepts Demonstrated
+## Core Computer Organization Concepts Demonstrated
 
 ### 1. BIOS & DOS Subsystems Interface
 *   **`INT 10h` Video Standard**: Configures standard high-compatibility color text Mode 3 (`AH = 00h`, `AL = 03h`) to quickly clear the workspace and center elements.
 *   **`INT 21h` System I/O**:
     *   `AH = 09h`: Scans memory boundaries and writes strings terminated by the standard dollar sign (`$`) delimiter.
     *   `AH = 01h`: Reads text with terminal echo for normal number inputs.
-    *   `AH = 08h`: Reads directly from the keyboard input buffer **without echoing** characters to print custom asterisk masks instead.
+    *   `AH = 08h`: Reads directly from the keyboard input buffer without echoing characters to print custom asterisk masks instead.
 *   **`INT 16h` BIOS Keyboard Controller**: Directly polls hardware keystrokes to pause screens without flooding output logs.
 
 ### 2. Pointer & Matrix Operations
@@ -106,7 +106,7 @@ flowchart TD
 
 ---
 
-## 🚀 How to Launch and Test
+## How to Launch and Test
 
 ### Prerequisites
 *   **EMU8086 Emulator**: Installed on your computer.
@@ -138,5 +138,5 @@ flowchart TD
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
