@@ -1,0 +1,14 @@
+# EMU8086 Assembler Output Files
+*.bin
+*.com
+*.exe
+*.lst
+*.obj
+*.symbol
+*.symbols
+*.tmp
+*.~*
+
+# OS Files
+.DS_Store
+Thumbs.db
